@@ -2,6 +2,10 @@
 
 This is a simple **Stopwatch and Timer** website. You can use it to measure time or set a countdown.  
 
+# Live Demo
+
+You can access the live demo of this project via GitHub Pages:
+[GitHub Pages Link](https://bhaveshbhoi256.github.io/stop-watch-timer/)
 ## 📂 Files  
 - `index.html` → The main webpage  
 - `styles.css` → The design (colors, layout)  
