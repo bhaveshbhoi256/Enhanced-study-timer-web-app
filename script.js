@@ -1,57 +1,38 @@
-let time = 0;
-let interval;
+let timeLeft = 1500;
+let timerInterval;
 let running = false;
 
-const timerDisplay = document.querySelector(".timer");
-const startButton = document.getElementById("start");
-const pauseButton = document.getElementById("pause");
-const resetButton = document.getElementById("reset");
-const customTimeInput = document.getElementById("customTime");
-const setTimeButton = document.getElementById("setTime");
-
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+function updateTimerDisplay() {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    document.getElementById('timer').textContent = 
+        `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
-function updateDisplay() {
-    timerDisplay.textContent = formatTime(time);
-}
-
-startButton.addEventListener("click", () => {
+function startTimer() {
     if (!running) {
         running = true;
-        interval = setInterval(() => {
-            if (time > 0) {
-                time--;
-                updateDisplay();
+        timerInterval = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
             } else {
-                clearInterval(interval);
+                clearInterval(timerInterval);
                 running = false;
+                alert("Time's up! Take a break.");
             }
         }, 1000);
     }
-});
+}
 
-pauseButton.addEventListener("click", () => {
-    clearInterval(interval);
+function pauseTimer() {
+    clearInterval(timerInterval);
     running = false;
-});
+}
 
-resetButton.addEventListener("click", () => {
-    clearInterval(interval);
+function resetTimer() {
+    clearInterval(timerInterval);
+    timeLeft = 1500;
+    updateTimerDisplay();
     running = false;
-    time = 0;
-    updateDisplay();
-});
-
-setTimeButton.addEventListener("click", () => {
-    const newTime = parseInt(customTimeInput.value);
-    if (!isNaN(newTime) && newTime > 0) {
-        time = newTime;
-        updateDisplay();
-    }
-});
-
-updateDisplay();
+}
