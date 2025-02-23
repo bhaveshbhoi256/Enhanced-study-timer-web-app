@@ -5,7 +5,7 @@ This is a simple **Stopwatch and Timer** website. You can use it to measure time
 # Live Demo
 
 You can access the live demo of this project via GitHub Pages:
-[GitHub Pages Link](https://bhaveshbhoi256.github.io/stopwatch-timer/)
+[GitHub Pages Link](https://bhaveshbhoi256.github.io/Enhanced-study-timer-web-app/)
 ## 📂 Files  
 - `index.html` → The main webpage  
 - `styles.css` → The design (colors, layout)  
