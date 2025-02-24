@@ -1,23 +1,22 @@
-# Stopwatch & Timer ⏱  
+# Enhanced Study Timer ⏱  
 
-This is a simple **Stopwatch and Timer** website. You can use it to measure time or set a countdown.  
+A simple, responsive web app for managing study sessions using the Pomodoro Technique and a to-do list. Built with HTML, CSS, and JavaScript.
 
 # Live Demo
 
 You can access the live demo of this project via GitHub Pages:
 [GitHub Pages Link](https://bhaveshbhoi256.github.io/Enhanced-study-timer-web-app/)
-## 📂 Files  
-- `index.html` → The main webpage  
-- `styles.css` → The design (colors, layout)  
-- `script.js` → The code that makes it work  
+# 🚀 How to Use  
+## Pomodoro Timer
 
-## 🚀 How to Use  
-1. **Open the webpage** in a browser.  
-2. Click **Stopwatch** to use the stopwatch.  
-   - Start, pause, or reset the time.  
-3. Click **Timer** to use the timer.  
-   - Enter **minutes and seconds**, then start.  
-4. Done! 🎉  
+1. Start: Click the "Start" button to begin the 25-minute timer.
+2. Pause: Click "Pause" to temporarily stop the timer.
+3. Reset: Click "Reset" to restart the timer.
+
+## To-Do List
+
+1. Add Task: Type a task in the input box and click "Add Task."
+2. Remove Task: Click on a task to delete it.
 
 ## 🤝 Teammets
 1. Bhavesh Bhoi
