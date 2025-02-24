@@ -1,38 +1,51 @@
-let timeLeft = 1500;
-let timerInterval;
-let running = false;
+let timer;
+let timeLeft = 1500; // 25 minutes in seconds
+let isRunning = false;
 
 function updateTimerDisplay() {
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft % 60;
-    document.getElementById('timer').textContent = 
-        `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    document.getElementById('timer').innerText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
 function startTimer() {
-    if (!running) {
-        running = true;
-        timerInterval = setInterval(() => {
+    if (!isRunning) {
+        isRunning = true;
+        timer = setInterval(() => {
             if (timeLeft > 0) {
                 timeLeft--;
                 updateTimerDisplay();
             } else {
-                clearInterval(timerInterval);
-                running = false;
-                alert("Time's up! Take a break.");
+                clearInterval(timer);
+                isRunning = false;
+                alert("Time's up!");
             }
         }, 1000);
     }
 }
 
 function pauseTimer() {
-    clearInterval(timerInterval);
-    running = false;
+    clearInterval(timer);
+    isRunning = false;
 }
 
 function resetTimer() {
-    clearInterval(timerInterval);
+    clearInterval(timer);
     timeLeft = 1500;
     updateTimerDisplay();
-    running = false;
+    isRunning = false;
 }
+
+function addTask() {
+    let taskInput = document.getElementById("taskInput");
+    let taskText = taskInput.value.trim();
+    if (taskText !== "") {
+        let li = document.createElement("li");
+        li.textContent = taskText;
+        li.onclick = () => li.remove();
+        document.getElementById("tasks").appendChild(li);
+        taskInput.value = "";
+    }
+}
+
+updateTimerDisplay();
