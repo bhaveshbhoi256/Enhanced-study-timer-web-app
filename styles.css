@@ -1,7 +1,26 @@
 body { font-family: Arial, sans-serif; text-align: center; }
 .timer { font-size: 3rem; margin: 20px; }
-button { margin: 5px; padding: 10px 20px; cursor: pointer; }
-.task-list { margin-top: 20px; }
+button { margin: 5px;  cursor: pointer; }
+
+.task-list { 
+  margin-top: 2px;
+  text-align: center;
+ }
+ ul { 
+  list-style: none; 
+  padding: 0; 
+}
+li { 
+  margin: 5px 0; 
+  background: #e3e3e3; 
+  padding: 10px; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+li:hover {
+  background: #d1d1d1;
+}
+
 section {
     padding: 100px;
     height: 100vh;
