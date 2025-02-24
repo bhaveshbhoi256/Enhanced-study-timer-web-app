@@ -9,27 +9,29 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <a class="nav-link" href="#Pomodoro" >Pomodoro</a>
-           <a class="nav-link" href="#To-Do list" >To-Do list</a>
-        
+            <a class="nav-link" href="#Pomodoro">Pomodoro</a>
+            <a class="nav-link" href="#To-Do-list">To-Do List</a>
         </nav>
     </header>
+
     <section id="Pomodoro">
-    <h1>Enhanced Study Timer</h1>
-    
-    <div class="timer" id="timer">25:00</div>
-    <button onclick="startTimer()">Start</button>
-    <button onclick="pauseTimer()">Pause</button>
-    <button onclick="resetTimer()">Reset</button>
+        <h1>Enhanced Study Timer</h1>
+        <div class="timer" id="timer">25:00</div>
+        <div class="timer-controls">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
     </section>
 
-    <section id="To-Do list">
-    <div class="task-list">
-        <input type="text" id="taskInput" placeholder="Add a task...">
-        <button onclick="addTask()">Add Tasks</button>
-        <ul id="tasks"></ul>
-    </div>
+    <section id="To-Do-list">
+        <div class="task-list">
+            <input type="text" id="taskInput" placeholder="Add a task...">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="tasks"></ul>
+        </div>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>
