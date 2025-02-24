@@ -5,6 +5,7 @@ button { margin: 5px; padding: 10px 20px; cursor: pointer; }
 section {
     padding: 100px;
     height: 100vh;
+    
 }
 header {
     position: fixed;
@@ -19,12 +20,6 @@ header {
     color: white;
   
 }
-.nav-bar {
-  
-    display: flex;
-    gap: 20px;
-  }
-  
   .nav-link {
     text-decoration: none;
     color: white;
